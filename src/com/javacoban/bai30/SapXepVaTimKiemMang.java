@@ -57,6 +57,15 @@ public class SapXepVaTimKiemMang {
 		for(int i : arr) {
 			System.out.print(i + " ");
 		}
+		
+		//Tim kiem trong mang
+		System.out.println("Nhap gia tri ban muon tim vi tri: ");
+		int k = scanner.nextInt();
+		for(int i = 0; i < arr.length; i++) {
+			if(k == arr[i]) {
+				System.out.println("Gia tri " + k + " o vi tri thu " + i);
+			}
+		}
 	}
 
 }
