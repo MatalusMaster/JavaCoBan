@@ -6,25 +6,27 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Employee[] employees = new Employee[3];
+		Employee[] emps = new Employee[3];
 		Scanner scanner = new Scanner(System.in);
-
-		System.out.println("Vui long nhap thong tin cua 3 nhan vien");
-		for (int i = 0; i < employees.length; i++) {
+		System.out.println("Vui long nhap vao thong tin cua 3 nhan vien");
+		
+		for(int i = 0; i < emps.length; i++) {
 			String tenDuong = scanner.nextLine();
 			String ten = scanner.nextLine();
 			double luong = scanner.nextDouble();
-
+			
 			Address address = new Address(tenDuong);
-			Employee emp = new Employee(ten, luong);
+			Employee emp = new Employee(ten,luong);
 			emp.setAddress(address);
-			employees[i] = emp;
-			// Xoa bo nho diem cua ban phim
+			
+			emps[i] = emp;
+			
+			//Xoa bo nho dem
 			scanner.nextLine();
 		}
-
-		System.out.println("Thong tin nhan vien da nhap vao la:");
-		for (Employee emp : employees) {
+		
+		System.out.println("Thong tin nhan vien nhap vao: ");
+		for(Employee emp : emps) {
 			System.out.println(emp.getTen() + " " + emp.getAddress().getTenDuong() + " " + emp.getLuong());
 		}
 	}
